@@ -1,81 +1,83 @@
-Enhanced Banking Application
-A comprehensive Java-based banking application that demonstrates object-oriented programming principles, including inheritance, polymorphism, and file handling.
+# 💳 Enhanced Banking Application
 
-Features
-Account Management: Create savings or checking accounts with unique account numbers
+A comprehensive **Java-based banking application** that demonstrates key **object-oriented programming (OOP) principles**, including **inheritance, polymorphism, and file handling**.
 
-Transaction Processing: Deposit, withdraw, and transfer funds between accounts
+---
 
-Security: 4-digit PIN authentication with account locking after multiple failed attempts
+## ✨ Features
 
-Transaction History: View complete transaction records with timestamps
+- **Account Management**: Create savings or checking accounts with unique account numbers.  
+- **Transaction Processing**: Deposit, withdraw, and transfer funds between accounts.  
+- **Security**: 4-digit PIN authentication with account locking after multiple failed attempts.  
+- **Transaction History**: Complete transaction records with timestamps.  
+- **Interest Calculation**: Interest applied based on account type and time period.  
+- **Data Persistence**: Automatic saving/loading of account data using serialization.  
+- **Admin Functions**: Unlock accounts, adjust rates, manage overdraft limits via admin PIN (`9999`).  
+- **Theme Support**: Multiple UI themes (Classic, Dark, Light, Professional).  
+- **Inheritance Implementation**: OOP design with `BankAccount` as base class and specialized account types.  
 
-Interest Calculation: Calculate interest based on account type and time period
+---
 
-Data Persistence: Automatic saving and loading of account data
+## 🏦 Account Types
 
-Admin Functions: Special admin PIN (9999) for account unlocking and interest rate changes
+### 🔹 Savings Account
+- Higher interest rate (**2.5%**)  
+- Annual bonus (**1% of balance**)  
+- Standard withdrawal limits  
 
-Theme Support: Multiple UI themes (Classic, Dark, Light, Professional)
+### 🔹 Checking Account
+- Lower interest rate (**1.5%**)  
+- Overdraft protection (default **$500**)  
+- Customizable overdraft limits (**admin only**)  
 
-Inheritance Implementation: Proper OOP design with BankAccount as base class and specialized account types
+---
 
-Account Types
-Savings Account
-Higher interest rate (2.5%)
+## 🛠 Class Structure
 
-Annual bonus feature (1% of balance)
-
-Standard withdrawal limits
-
-Checking Account
-Lower interest rate (1.5%)
-
-Overdraft protection (default $500 limit)
-
-Customizable overdraft limits (admin only)
-
-Class Structure
-text
 BankApp (Main class)
 │
 ├── BankAccount (Abstract base class)
-│   ├── SavingsAccount (Concrete subclass)
-│   └── CheckingAccount (Concrete subclass)
-Technologies Used
-Java Programming Language
+│ ├── SavingsAccount (Concrete subclass)
+│ └── CheckingAccount (Concrete subclass)
 
-Object Serialization for data persistence
 
-Java Time API for transaction timestamps
+---
 
-Java Collections Framework for data management
+## 🧑‍💻 Technologies Used
 
-How to Run
-Compile the application:
+- **Java Programming Language**  
+- **Object Serialization** (for data persistence)  
+- **Java Time API** (for timestamps)  
+- **Java Collections Framework** (for data management)  
 
-bash
-javac *.java
+---
+
+## 🚀 How to Run
+
+1. **Compile the application**:
+   ```bash
+   javac *.java
 Run the application:
 
-bash
 java BankApp
+
+
 Follow the on-screen menu to:
 
-Create a new account
+Create an account
 
 Login to an existing account
 
 Perform banking operations
 
-Usage Instructions
-Creating an Account:
+📋 Usage Instructions
+🔑 Creating an Account
 
 Select option 2 from the main menu
 
-Provide your full name
+Enter your full name
 
-Choose account type (Savings or Checking)
+Choose account type (Savings/Checking)
 
 Set a 4-digit PIN
 
@@ -83,108 +85,111 @@ Make an initial deposit
 
 Note your account number for future logins
 
-Logging In:
+🔑 Logging In
 
 Select option 1 from the main menu
 
-Enter your account number and PIN
+Enter account number & PIN
 
-After 3 failed attempts, account will be locked
+After 3 failed attempts, the account locks
 
-Use admin PIN (9999) to unlock locked accounts
+Use admin PIN (9999) to unlock
 
-Banking Operations:
+💵 Banking Operations
 
-Deposit funds (option 1)
+Deposit funds (1)
 
-Withdraw funds (option 2)
+Withdraw funds (2)
 
-Transfer to other accounts (option 3)
+Transfer funds (3)
 
-Check balance (option 4)
+Check balance (4)
 
-View transaction history (option 5)
+View transaction history (5)
 
-Calculate interest (option 6)
+Calculate interest (6)
 
-Change theme (option 7)
+Change theme (7)
 
-Switch accounts (option 8)
+Switch accounts (8)
 
-Access account settings (option 9)
+Account settings (9)
 
-Use account-specific features (option 10)
+Account-specific features (10)
 
-Admin Functions
+👨‍💼 Admin Functions
+
 Admin PIN: 9999
 
 Unlock locked accounts
 
 Change interest rates
 
-Modify checking account overdraft limits
+Modify overdraft limits
 
-Data Storage
-Account data is automatically saved to bank_data.dat when:
+💾 Data Storage
 
-Creating a new account
+Account data is saved to bank_data.dat when:
 
-Making transactions
+Creating accounts
+
+Performing transactions
 
 Changing account settings
 
-Exiting the application
+Exiting the app
 
-Data is automatically loaded from this file when the application starts.
+Data automatically loads at application startup.
 
-Inheritance Implementation
-The application demonstrates proper use of inheritance:
+🧩 Inheritance Implementation
 
-BankAccount is an abstract base class containing:
+BankAccount (abstract)
 
-Common fields (account holder name, account number, balance, etc.)
+Fields: account holder, number, balance, etc.
 
-Common methods (deposit, withdraw, transfer, etc.)
+Methods: deposit, withdraw, transfer, etc.
 
-Abstract method (getAccountType())
+Abstract: getAccountType()
 
-SavingsAccount extends BankAccount with:
+SavingsAccount
 
 Higher interest rate
 
 Annual bonus feature
 
-CheckingAccount extends BankAccount with:
+CheckingAccount
 
 Overdraft protection
 
-Customizable overdraft limits
+Custom overdraft limits
 
-Notes
-All monetary values are represented in dollars
+📌 Notes
 
-Transaction history includes timestamps for all operations
+Monetary values represented in USD ($)
 
-The application handles edge cases like insufficient funds and invalid inputs
+Transactions include timestamps
 
-Data is preserved between application sessions through serialization
+Handles edge cases (invalid input, insufficient funds)
 
-Future Enhancements
-Potential improvements for future versions:
+Data persists between sessions via serialization
 
-Database integration instead of file storage
+🔮 Future Enhancements
 
-Network connectivity for remote access
+Database integration (replace file storage)
+
+Network connectivity for remote banking
 
 Web or mobile interface
 
-Enhanced security features
+Advanced security features
 
-Support for additional account types
+Support for multiple currencies
 
-Currency support beyond dollars
+Compound interest calculations
 
-Interest compounding calculations
+Additional account types
 
-License
-This project is for educational purposes to demonstrate Java OOP concepts and inheritance implementation.
+📜 License
+
+This project is developed for educational purposes to demonstrate Java OOP concepts and inheritance implementation.
+
